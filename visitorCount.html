@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visitor count</title>
+    <script async src="https://api.countapi.xyz/hit/codefoxx.com/20de0f95-6d50-4dc4-a76f-56a935bb47ec?callback=websiteVisits"></script>
+    <style>
+        
+        .main1{
+            position: static;
+            letter-spacing: 10px;
+            animation-name: shr;
+            animation-duration: 5s;
+            color: rgb(236, 83, 12);
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes shr {
+            0%{
+                position: static;
+                transform: translateX(-100%);
+            }
+            100%{
+                position: static;
+                transform: translateX(40%);
+            }
+        }
+        h2{
+            text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="main1">WELCOME</h1>
+    <h2> You are the visitor number <span id="visits"></span> of this site</h2>
+    
+    <script>
+function websiteVisits(response) {
+    document.querySelector("#visits").textContent = response.value;
+}
+    </script>
+</body>
+</html>
